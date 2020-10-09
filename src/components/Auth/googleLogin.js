@@ -12,13 +12,19 @@ class GoogleLogin extends Component {
     const { user, signOut, signInWithGoogle } = this.props;
 
     return (
-      <div>
-        {user ? <p>Hello, {user.displayName}</p> : <p>Please, sign in</p>}
-        {user ? (
-          <button onClick={signOut}>Sign out</button>
-        ) : (
-          <button onClick={signInWithGoogle}>Sign in with google</button>
-        )}
+      <div className="ed-grid">
+        <div>
+          {user ? <p>Hello, {user.displayName}</p> : <p>Please, sign in</p>}
+          {user ? (
+            <button className="button" onClick={signOut}>
+              Sign out
+            </button>
+          ) : (
+            <button className="button" onClick={signInWithGoogle}>
+              Sign in with google
+            </button>
+          )}
+        </div>
       </div>
     );
   }
