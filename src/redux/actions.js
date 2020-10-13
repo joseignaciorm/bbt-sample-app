@@ -1,0 +1,7 @@
+export const SIGNIN = "SIGNIN"
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS"
+export const LOGIN_ERROR = "LOGIN_ERROR"
+export const SIGNOUT_SUCCESS = "SIGNOUT_SUCCESS"
+
+export const CREATE_DATA_APP = "CREATE_DATA_APP"
+export const CREATE_DATA_ERROR = "CREATE_DATA_ERROR"

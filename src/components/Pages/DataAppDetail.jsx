@@ -1,6 +1,6 @@
 import React from "react";
 
-const Data = () => {
+const DataAppDetail = () => {
   return (
     <div className="ed-grid">
       <h1>Single data</h1>
@@ -8,4 +8,4 @@ const Data = () => {
   );
 };
 
-export default Data;
+export default DataAppDetail;

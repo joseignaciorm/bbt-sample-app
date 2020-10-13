@@ -1,8 +1,11 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
+//import withLogin from "../HOC/withLogin"
+import { connect } from "react-redux"
 
 const Public = ({ component: Component, ...rest }) => {
-  const userLogged = true;
+  const { auth } = rest
+  const userLogged = auth.uid
 
   if (userLogged) {
     return <Redirect to="/" />;
@@ -10,4 +13,10 @@ const Public = ({ component: Component, ...rest }) => {
   return <Route {...rest} component={Component} />;
 };
 
-export default Public;
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebaseReducer.auth
+  }
+}
+
+export default connect(mapStateToProps)(Public);
